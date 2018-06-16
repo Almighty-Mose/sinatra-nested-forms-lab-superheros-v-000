@@ -7,4 +7,10 @@ class App < Sinatra::Base
     get '/' do
       erb :team
     end
+
+    post '/super_hero' do
+      @team = Team.new(params[:team])
+
+      erb :super_hero
+    end
 end
